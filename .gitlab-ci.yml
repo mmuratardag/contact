@@ -1,5 +1,5 @@
 # .gitlab-ci.yml
-# keep original, 
+# GitLab CI/CD configuration file for deploying a static site to GitLab Pages
 
 pages:
   stage: deploy
