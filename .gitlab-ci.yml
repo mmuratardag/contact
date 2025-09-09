@@ -1,4 +1,5 @@
 # .gitlab-ci.yml
+# keep original
 
 pages:
   stage: deploy
