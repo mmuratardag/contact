@@ -1,0 +1,71 @@
+/* Imprint & Privacy Specific Styles */
+
+.disclaimer {
+    text-align: left;
+    line-height: 1.6;
+    color: #444;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+}
+
+.disclaimer h3 {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    color: #222;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.disclaimer hr {
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 2rem 0;
+}
+
+.disclaimer ul {
+    list-style-type: none; /* Cleaner look */
+    padding-left: 0;
+}
+
+.disclaimer ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+/* Adds a subtle marker to list items without bulky bullets */
+.disclaimer ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #888;
+}
+
+/* Styling for the Right to Object section to make it look official */
+.disclaimer em {
+    display: block;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-left: 3px solid #ccc;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Subtle link styling for the "Back" button */
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #007bff;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
