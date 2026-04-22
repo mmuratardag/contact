@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Personal link hub — connect with Dr. M. Murat Ardag on LinkedIn and Xing." />
+<title>Dr. M. Murat Ardag — QR Code Links</title>
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  /* Decorative background blobs */
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.22;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  body::before {
+    background: #0a66c2;
+    top: -150px;
+    left: -150px;
+  }
+
+  body::after {
+    background: #026466;
+    bottom: -150px;
+    right: -150px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Link cards */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .link-card {
+    display: block;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #f8fafc;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease, background-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-card:hover,
+  .link-card:focus-visible {
+    transform: translateY(-4px) scale(1.01);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  .link-card:focus-visible {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .link-card.linkedin:hover,
+  .link-card.linkedin:focus-visible {
+    border-color: #0a66c2;
+    box-shadow: 0 15px 40px rgba(10, 102, 194, 0.4);
+  }
+
+  .link-card.xing:hover,
+  .link-card.xing:focus-visible {
+    border-color: #026466;
+    box-shadow: 0 15px 40px rgba(2, 100, 102, 0.4);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.25rem 0.5rem 0.75rem;
+  }
+
+  .card-label {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
+
+  .brand-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .linkedin .brand-dot {
+    background: #0a66c2;
+    box-shadow: 0 0 12px rgba(10, 102, 194, 0.6);
+  }
+
+  .xing .brand-dot {
+    background: #026466;
+    box-shadow: 0 0 12px rgba(2, 100, 102, 0.6);
+  }
+
+  .arrow {
+    opacity: 0.5;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .link-card:hover .arrow,
+  .link-card:focus-visible .arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1e293b;
+    position: relative;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-image-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    z-index: 2;
+    background: #1e293b;
+  }
+
+  /* Fallback sits behind the image; only visible if the image fails */
+  .card-image-wrap .fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    color: #f8fafc;
+    font-weight: 600;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .linkedin .card-image-wrap .fallback {
+    background: linear-gradient(135deg, #0a66c2 0%, #084b91 100%);
+  }
+
+  .xing .card-image-wrap .fallback {
+    background: linear-gradient(135deg, #026466 0%, #014344 100%);
+  }
+
+  .fallback-icon {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .fallback-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+
+  /* Responsive tweaks */
+  @media (min-width: 640px) {
+    .card-image-wrap {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .container,
+    .link-card,
+    .arrow {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+    <nav class="links" aria-label="Social links">
+      <a
+        class="link-card linkedin"
+        href="https://www.linkedin.com/in/mmuratardag/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open LinkedIn profile in a new tab, or scan the QR code shown"
+      >
+        <div class="card-header">
+          <span class="card-label">
+            <span class="brand-dot" aria-hidden="true"></span>
+            LinkedIn
+          </span>
+          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+        <div class="card-image-wrap">
+          <div class="fallback" aria-hidden="true">
+            <span class="fallback-icon">in</span>
+            <span class="fallback-text">Open LinkedIn profile</span>
+          </div>
+          <img
+            src="linkedin.jpg"
+            alt="LinkedIn profile card with QR code"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </a>
+
+      <a
+        class="link-card xing"
+        href="https://www.xing.com/profile/MMurat_Ardag/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Xing profile in a new tab, or scan the QR code shown"
+      >
+        <div class="card-header">
+          <span class="card-label">
+            <span class="brand-dot" aria-hidden="true"></span>
+            Xing
+          </span>
+          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+        <div class="card-image-wrap">
+          <div class="fallback" aria-hidden="true">
+            <span class="fallback-icon">X</span>
+            <span class="fallback-text">Open Xing profile</span>
+          </div>
+          <img
+            src="xing.png"
+            alt="Xing profile card with QR code"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
